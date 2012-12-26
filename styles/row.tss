@@ -1,0 +1,14 @@
+".vgroup": {
+  layout: "vertical",
+  height: Ti.UI.SIZE
+},
+"#row": {
+  className: "book_row",
+  height: '50dp'
+},
+"#itemTitle": {
+  top: "2dp",
+  height: Ti.UI.SIZE,
+  left: "0dp",
+  color: '#000'
+}

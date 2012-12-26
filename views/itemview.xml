@@ -1,0 +1,8 @@
+<Alloy>
+	<Window class="container">
+		<Label id="name"></Label>
+		<Label id="location"></Label>
+		<Label id="price"></Label>
+		<Label id="url"></Label>
+	</Window>
+</Alloy>

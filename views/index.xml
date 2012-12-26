@@ -1,0 +1,8 @@
+<Alloy>
+	<Window class="container">
+		<View id="headerView">
+			<Label id="headerLabel">Artículos Misceláneos</Label>
+		</View>
+		<TableView id="categTable" onClick="showItems"></TableView>
+	</Window>
+</Alloy>

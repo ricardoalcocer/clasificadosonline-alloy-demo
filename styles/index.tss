@@ -1,0 +1,15 @@
+".container": {
+	backgroundColor:"white",
+	layout: "vertical"
+},
+"#headerView": {
+	height: "50dp",
+	backgroundColor: "yellow"
+},
+"#headerLabel":{
+	color: "red",
+	height: "50dp"
+},
+"#categTable":{
+	height: Ti.UI.FILL
+}
