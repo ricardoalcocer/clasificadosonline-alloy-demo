@@ -1,8 +1,32 @@
 <Alloy>
 	<Window class="container">
-		<View id="headerView">
-			<Label id="headerLabel">Artículos Misceláneos</Label>
+		<View id="menu" onClick="showhidemenu"></View>
+			<TableView id="categories" onClick="onCategoryClick"></TableView>
+		<View id="main">
+			<View id="iconBar">
+				<ImageView id="menubtn" onClick="showhidemenu"></ImageView>
+				<ImageView id="chatbtn" visible="false"></ImageView>
+			</View>
+			<View id="grayLine"></View>
+			<TableView id="mainList">
+				<TableViewRow id="listRow">
+					<View id="rowContainer">
+						<ImageView id="profilePic"></ImageView>
+						<Label id="profileName">Ricardo Alcocer</Label>
+						<Label id="timeAgo">10 minutes ago</Label>
+						<Label id="status">This is my status update.</Label>
+						<View id="grayLine" bottom="51"></View>
+						<View id="bottomActions">
+							<View class="itemActionButton">
+								<ImageView id="likeBtn"></ImageView>
+							</View>
+							<View  class="itemActionButton">
+								<ImageView id="commentBtn"></ImageView>
+							</View>
+						</View>
+					</View>
+				</TableViewRow>
+			</TableView>
 		</View>
-		<TableView id="categTable" onClick="showItems"></TableView>
 	</Window>
 </Alloy>

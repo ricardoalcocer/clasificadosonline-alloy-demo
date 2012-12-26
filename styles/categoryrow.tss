@@ -1,0 +1,9 @@
+"#row":{
+	height: "40dp"	
+},
+"#categoryEntry":{
+	left: "5dp",
+	font:{
+		fontSize: "14dp"
+	}
+}
