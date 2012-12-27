@@ -1,7 +1,0 @@
-<Alloy>
-	<Window id="container">
-		<View id="headerView">
-			<Label id="headerLabel"></Label>
-		</View>
-	</Window>
-</Alloy>

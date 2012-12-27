@@ -20,7 +20,19 @@
 	height: Ti.UI.FILL,
 	width: Ti.UI.FILL,
 	backgroundColor: "#dbdbdb",
-	left: 0	
+	left: 0,
+	layout: "vertical"
+},
+"#categoryHeader":{
+	backgroundColor: "#000",
+	width: Ti.UI.FILL,
+	height: "54dp",
+	top: "0",
+	borderWidth: 0,
+	borderColor: "#000"
+},
+"#categories":{
+	
 },
 "#iconBar":{
 	backgroundImage: "/iconBarBG.png",
@@ -46,8 +58,7 @@
 	height: "1"	
 },
 "#mainList":{
-	backgroundColor: "#fbcfd0",
-	separatorStyle: "NONE"
+	backgroundColor: "#fff"
 },
 "#listRow":{
 	height: "200dp",
@@ -104,20 +115,6 @@
 	width: Ti.UI.FILL,
 	backgroundColor: "#eff2f5",
 	layout: "horizontal"
-},
-".itemActionButton":{
-	width: "50%",
-	height: "50dp"
-},
-"#likeBtn":{
-	width: "76dp",
-	height: "20dp",
-	image: "/likebtn.png"
-},
-"#commentBtn":{
-	width: "76dp",
-	height: "20dp",
-	image: "/commentbtn.png"
 },
 ".tbButton":{
 	width: "33%",

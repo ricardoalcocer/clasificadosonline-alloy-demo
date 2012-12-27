@@ -1,5 +1,5 @@
 <Alloy>
-	<TableViewRow id="row" categoryId="">
+	<TableViewRow id="row" categoryId="" categoryName="">
 		<Label id="categoryEntry"></Label>
 	</TableViewRow>
 </Alloy>

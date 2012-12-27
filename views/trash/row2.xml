@@ -1,7 +1,0 @@
-<Alloy>
-  <TableViewRow id="row">
-    <View class="vgroup">
-      <Label id="itemName"/>
-    </View>
-  </TableViewRow>
-</Alloy>

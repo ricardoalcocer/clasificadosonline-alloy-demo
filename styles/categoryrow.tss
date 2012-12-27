@@ -1,9 +1,11 @@
 "#row":{
-	height: "40dp"	
+	height: "40dp",
+	backgroundColor: "#e7e7e7"
 },
 "#categoryEntry":{
 	left: "5dp",
 	font:{
 		fontSize: "14dp"
-	}
+	},
+	color: "#717171"
 }

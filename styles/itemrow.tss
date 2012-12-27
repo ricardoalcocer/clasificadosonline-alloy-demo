@@ -1,0 +1,26 @@
+"#itemName":{
+	left: "0dp",
+	font: {
+		fontSize: "18dp"
+	},
+	color: "#000"
+},
+"#itemRow":{
+	height: "30dp"
+},
+"#listRow":{
+	height: "200dp",
+	selectionStyle: "NONE",
+	className:"listRow"
+},
+"#rowContainer":{
+	borderColor: "#cacdd8",
+	borderRadius: 3,
+	borderWidth: 1,
+	left: "5dp",
+	top: "5dp",
+	right: "5dp",
+	height: "190dp",
+	width: Ti.UI.FILL,
+	backgroundColor: "#fff"
+},
