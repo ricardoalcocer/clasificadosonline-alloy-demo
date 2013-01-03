@@ -23,6 +23,14 @@
 	left: 0,
 	layout: "vertical"
 },
+"#menutitle":{
+	color: "#fff",
+	left: "5",
+	font:{
+		fontWeight: 'bold',
+		fontSize: '18dp' 
+	}
+},
 "#categoryHeader":{
 	backgroundColor: "#000",
 	width: Ti.UI.FILL,

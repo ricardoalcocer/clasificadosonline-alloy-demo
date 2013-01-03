@@ -2,6 +2,7 @@
 	<Window class="container">
 		<View id="menu" onClick="showhidemenu">
 			<View id="categoryHeader">
+				<Label id="menutitle">Categorías</Label>
 			</View>
 			<TableView id="categories" onClick="onCategoryClick"></TableView>
 		</View>
