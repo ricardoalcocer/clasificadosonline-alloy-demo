@@ -6,7 +6,9 @@
 	color: "#000"
 },
 "#itemRow":{
-	height: "30dp"
+	height: "50dp",
+	backgroundColor: "#fff",
+	className:'categoryRow'
 },
 "#listRow":{
 	height: "200dp",
@@ -23,4 +25,4 @@
 	height: "190dp",
 	width: Ti.UI.FILL,
 	backgroundColor: "#fff"
-},
+}

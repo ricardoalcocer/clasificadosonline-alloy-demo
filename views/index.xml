@@ -2,14 +2,14 @@
 	<Window class="container">
 		<View id="menu" onClick="showhidemenu">
 			<View id="categoryHeader">
-				<Label id="menutitle">Categorías</Label>
+				<Label id="menutitle" onClick="onCategoryClick">Categorías</Label>
 			</View>
 			<TableView id="categories" onClick="onCategoryClick"></TableView>
 		</View>
 		<View id="main">
 			<View id="iconBar">
 				<ImageView id="menubtn" onClick="showhidemenu" bubbles="false"></ImageView>
-				<ImageView id="chatbtn" visible="false"></ImageView>
+				<Label id="currentcategory">Todas/All</Label>
 			</View>
 			<TableView id="mainList"></TableView>
 		</View>

@@ -9,6 +9,13 @@
 	height: Ti.UI.SIZE,
 	color: "#000"
 },
+"#currentcategory":{
+	color: "#fff",
+	font:{
+		fontWeight: 'bold',
+		fontSize: '18dp' 
+	}
+},
 "#main":{
 	height: Ti.UI.FILL,
 	width: Ti.UI.FILL,
@@ -66,7 +73,7 @@
 	height: "1"	
 },
 "#mainList":{
-	backgroundColor: "#fff"
+	backgroundColor: "#cacaca"
 },
 "#listRow":{
 	height: "200dp",

@@ -1,6 +1,7 @@
 "#row":{
 	height: "40dp",
-	backgroundColor: "#e7e7e7"
+	backgroundColor: "#e7e7e7",
+	className:'categoryRow'
 },
 "#categoryEntry":{
 	left: "5dp",
