@@ -104,7 +104,7 @@ var showItem=function(args){
 		$.itemContact.text="Contacto: " + data.contact;
 		$.itemPhone.text="Teléfono: " + data.phone;
 		$.itemPrice.text="Precio: " + data.price;
-		
+		$.itemView.borderWidth=2; // Set the borderWidth that is 0 by default and upon closing
 		$.itemView.visible=true;
 	}
 	
@@ -119,6 +119,7 @@ var showItem=function(args){
 
 // ################################################################
 var onItemViewClick=function(){
+	$.itemView.borderWidth=0; // had to hack this because Android kept showing the border even when the view was invisible
 	$.itemView.visible=false;
 }
 
