@@ -1,7 +1,15 @@
+// declare public vars
 var currentOrientation="PORTRAIT";
 var menuOpen = false;
 var baseURL="http://query.yahooapis.com/v1/public/yql?";
+var httpOptions={
+		async				:true,
+		ttl					:0, 
+		shouldAuthenticate	:false,
+		contentType			: "application/json"
+	}
 
+// instantiate helper classes
 var XHR = require("xhr");
 var xhr = new XHR();
 var COL = require("mod_col");
@@ -59,40 +67,74 @@ var onCategoryClick=function(e){
 		caption:selectedCategoryName
 	}
 	$.currentcategory.text=data.caption;
-	loadData(data,0); // this should send a JSON string to the function
+	loadData(data,0);
 }
 
 // ################################################################
 var loadData=function(args,startAt){
-	var httpOptions={
-		async				:true,
-		ttl					:false, 
-		shouldAuthenticate	:false,
-		contentType			: "application/json"
-	}
-	
 	var onSuccessCallback=function(jsonData){
-		var dataArray=col.getDataArray(jsonData,startAt);
+		var dataArray=col.getItemListDataArray(jsonData,startAt);
 		var contentLength=dataArray.length;
 		var tableData=[];
 		for (var i=0;i<contentLength;i++){
-			var payload={
-				itemId:dataArray[i].id,
-				itemName:dataArray[i].name
-			}
-			
+			var payload=dataArray[i];
 			var row=Alloy.createController('itemrow',payload).getView();
 			tableData.push(row);
 		}
 		$.mainList.data=tableData;
-		//$.mainList.scrollToTop();
 	}
 	
 	var onErrorCallback=function(data){
-		output="error";
+		alert('Connection error');
 	}
 	
-	xhr.get(baseURL + "q=select%20*%20from%20html%20where%20url%3D%22http%3A%2F%2Fclasificadosonline.com%2Fm%2FMiscellaneosListingM.asp%3FMisCat%3D" + args.id + "%26Submit2%3DSearch%2B-%2BBusqueda%26keyword%3D%26Desc%3D%26offset%3D" + startAt + "%22%20and%0A%20%20%20%20%20%20xpath%3D'%2Fhtml%2Fbody%2Fdiv%2Fdiv%2Fdiv%2Fform%2Ftable'&format=json&diagnostics=true&callback=", onSuccessCallback, onErrorCallback,httpOptions);
+	var fullURL=baseURL + "q=select%20*%20from%20html%20where%20url%3D%22http%3A%2F%2Fclasificadosonline.com%2Fm%2FMiscellaneosListingM.asp%3FMisCat%3D" + args.id + "%26Submit2%3DSearch%2B-%2BBusqueda%26keyword%3D%26Desc%3D%26offset%3D" + startAt + "%22%20and%0A%20%20%20%20%20%20xpath%3D'%2Fhtml%2Fbody%2Fdiv%2Fdiv%2Fdiv%2Fform%2Ftable'&format=json&diagnostics=true&callback=";
+	
+	xhr.get(fullURL, onSuccessCallback, onErrorCallback,httpOptions);
+}
+
+// ################################################################
+var showItem=function(args){
+	var onSuccessCallback=function(jsonData){
+		var data=col.getItemData(jsonData);
+		
+		$.itemImage.image=data.image;
+		$.itemName.text=data.name;
+		$.itemDescription.text=data.description;
+		$.itemContact.text="Contacto: " + data.contact;
+		$.itemPhone.text="Teléfono: " + data.phone;
+		$.itemPrice.text="Precio: " + data.price;
+		
+		$.itemView.visible=true;
+	}
+	
+	var onErrorCallback=function(data){
+		alert('Connection error');
+	}
+	
+	var fullURL=baseURL + "q=select%20*%20from%20html%20where%20url%3D%22http%3A%2F%2Fwww.clasificadosonline.com%2Fm%2FDetailMobile.asp%3FID%3D" + args.id + "%26Sec%3D5%22%20and%20xpath%3D'%2Fhtml%2Fbody%2Fdiv%2Fdiv%2Ftable'&format=json&diagnostics=true&callback=";
+
+	xhr.get(fullURL, onSuccessCallback, onErrorCallback,httpOptions);
+}
+
+// ################################################################
+var onItemViewClick=function(){
+	$.itemView.visible=false;
+}
+
+// ################################################################
+var onItemRowClick=function(e){
+	if(e.source.id==='itemName'){
+		var selectedItemId=e.source.parent.itemId;
+	}else{
+		var selectedItemId=e.row.itemId;
+	}
+	
+	var data={
+		id:selectedItemId
+	}
+	
+	showItem(data);
 }
 
 // ################################################################
@@ -107,6 +149,6 @@ loadCategoriesMenu();
 loadData({
 		id:0,
 		caption:'Todas/All'
-	},100
+	},0
 );
 $.index.open();

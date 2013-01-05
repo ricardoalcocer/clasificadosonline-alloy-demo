@@ -1,5 +1,7 @@
 <Alloy>
 	<TableViewRow id="itemRow" itemId="">
+		<Label id="itemCity"></Label>
+		<Label id="itemPrice"></Label>
 		<Label id="itemName"></Label>
 	</TableViewRow>
 </Alloy>

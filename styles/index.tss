@@ -161,4 +161,80 @@
 	height: "54dp",
 	right: 0,
 	image:"/chatbtn.png"
+},
+"#itemView":{
+	visible:false
+},
+".itemviewcontainer": {
+	height: Ti.UI.FILL,
+	width: Ti.UI.FILL,
+	backgroundColor: "white",
+	borderWidth: 1,
+	borderRadius: 5,
+	top: 20,
+	left: 20,
+	bottom: 20,
+	right: 20,
+	layout: "vertical"
+},
+"#closebutton":{
+	height: "20dp",
+	width: "20dp",
+	top: "5",
+	right: "5",
+	backgroundColor: "#000"
+},
+"#itemImage":{
+	width: "200dp",
+	height: "200dp"
+},
+"#itemName":{
+	color: "#000",
+	top: "5dp",
+	font:{
+		fontWeight: 'bold',
+		fontSize: '20dp' 
+	}
+},
+"#itemDescription":{
+	color: "#000",
+	top: "10dp",
+	font:{
+		fontSize: '13dp' 
+	}
+},
+"#itemScrollView":{
+	layout:"vertical",
+	showVerticalScrollIndicator:"true",
+	showHorizontalScrollIndicator:"false",
+	height:"100%",
+	width:"90%"	
+},
+"#itemPrice":{
+	left: "5dp",
+	color: "#000",
+	top: "10dp",
+	font:{
+		fontSize: '15dp',
+		fontWeight: 'bold' 
+	}
+},
+"#itemContact":{
+	left: "5dp",
+	color: "#000",
+	top: "10dp",
+	font:{
+		fontSize: '15dp',
+		fontWeight: 'bold'
+	}
+},
+"#itemPhone":{
+	left: "5dp",
+	color: "#000",
+	top: "10dp",
+	font:{
+		fontSize: '15dp',
+		fontWeight: 'bold'
+	}
 }
+

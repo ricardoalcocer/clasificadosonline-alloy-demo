@@ -1,12 +1,32 @@
 "#itemName":{
-	left: "0dp",
+	left: "5",
+	right: "5",
+	top: "20dp",
 	font: {
-		fontSize: "18dp"
+		fontSize: "16dp"
 	},
 	color: "#000"
 },
+"#itemCity":{
+	top: "2",
+	left: "5",
+	font: {
+		fontSize: "14dp",
+		fontWeight: "bold"
+	},
+	color: "#a0090c"
+},
+"#itemPrice":{
+	top: "2",
+	right: "5",
+	font: {
+		fontSize: "14dp",
+		fontWeight: "bold"
+	},
+	color: "#a0090c"
+},
 "#itemRow":{
-	height: "50dp",
+	height: "65dp",
 	backgroundColor: "#fff",
 	className:'categoryRow'
 },

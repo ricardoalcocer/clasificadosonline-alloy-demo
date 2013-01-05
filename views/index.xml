@@ -11,7 +11,18 @@
 				<ImageView id="menubtn" onClick="showhidemenu" bubbles="false"></ImageView>
 				<Label id="currentcategory">Todas/All</Label>
 			</View>
-			<TableView id="mainList"></TableView>
+			<TableView id="mainList" onClick="onItemRowClick"></TableView>
+		</View>
+		<View id="itemView" class="itemviewcontainer">
+			<View id="closebutton" onClick="onItemViewClick"></View>
+			<ScrollView id="itemScrollView">
+				<ImageView id="itemImage"></ImageView>
+				<Label id="itemName"></Label>
+				<Label id="itemDescription"></Label>
+				<Label id="itemContact"></Label>
+				<Label id="itemPhone"></Label>
+				<Label id="itemPrice"></Label>
+			</ScrollView>
 		</View>
 	</Window>
 </Alloy>
